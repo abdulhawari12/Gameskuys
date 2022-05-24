@@ -1,0 +1,213 @@
+@font-face{
+  src: url('fonts/Montserrat-Bold.ttf');
+  font-family: 'bold';
+}
+@font-face{
+  src: url('fonts/Montserrat-Medium.ttf');
+  font-family: 'medium';
+}
+@font-face{
+  src: url('fonts/Montserrat-SemiBold.ttf');
+  font-family: 'semibold';
+}
+:root{
+  --bg-parent: #00487C;
+  --bg-color-primary: #027BCE;
+  --bg-color-secondary: #0496FF;
+  --bg-color-light: #4BB3FD;
+  --bg-color-whitesmoke: #3E6680;
+  --text-color-white: #FFFFFF;
+}
+body 
+{
+  background: var(--bg-parent);
+}
+.form 
+{
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+.form .img 
+{
+  display: none;
+}
+form 
+{
+  width: 90%;
+  height: 400px;
+  background: var(--bg-color-secondary);
+  padding: 10px;
+  border-radius: 10px;
+}
+form h3 
+{
+  font-size: 20px;
+  font-family: bold;
+  color: var(--text-color-white);
+  text-align: center;
+  margin: 30px;
+}
+form .inputText 
+{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
+  margin: 30px 0px;
+}
+.inputText .logo 
+{
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  background: var(--bg-parent);
+}
+.inputText .logo img 
+{
+  width: 25px;
+  height: 25px;
+}
+.inputText input 
+{
+  width: 290px;
+  height: 50px;
+  outline: none;
+  border: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  z-index: 4;
+  background: transparent;
+  border-radius: 10px;
+  color: #11101d;
+  font-size: 14px;
+  font-family: semibold;
+  
+}
+.inputText label 
+{
+  position: absolute;
+  z-index: 3;
+  transform: translateX(-70px);
+  font-size: 14px;
+  font-family: semibold;
+  transition: all 0.3s;
+}
+#username:focus ~ label,
+#username:not(:placeholder-shown)#username:not(:focus) ~ label
+{
+  transform: translateX(-90px) translateY(-40px);
+  font-size: 10px;
+  color: var(--text-color-white);
+}
+#password:focus ~ label,
+#password:not(:placeholder-shown)#password:not(:focus) ~ label
+{
+  transform: translateX(-90px) translateY(-40px);
+  font-size: 10px;
+  color: var(--text-color-white);
+}
+.inputText .show 
+{
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg-parent);
+  position: absolute;
+  transform: translateX(148px);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  z-index: 6;
+}
+.inputText .show img 
+{
+  width: 20px;
+  height: 20px;
+}
+form .checkbox
+{
+  display: flex;
+  align-items: center;
+  width: 200px;
+  height: 30px;
+  margin-bottom: 30px;
+}
+form .checkbox label 
+{
+  color: white;
+  font-size: 13px;
+  font-family: semibold;
+  margin-left: 10px;
+}
+.checkbox #checkbox
+{
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 100px;
+  background: white;
+  transition: all 0.3s;
+}
+.checkbox #checkbox:checked::before
+{
+  content: '✓';
+  font-size: 13px;
+  color: white;
+  width: 20px;
+  height: 20px;
+  background: var(--bg-parent);
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form button 
+{
+  width: 250px;
+  height: 50px;
+  outline: none;
+  border: none;
+  background: var(--bg-parent);
+  color: white;
+  font-size: 16px;
+  font-family: bold;
+  border-radius: 5px;
+  margin-left: 50px;
+}
+form .end 
+{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form .end a 
+{
+  text-decoration: none;
+  color: var(--text-color-white);
+  font-size: 12px;
+  font-family: bold;
+}
+@media screen and(min-width: 768px)
+{
+  form
+  {
+    width: 50%;
+    height: 100;
+  }
+}
